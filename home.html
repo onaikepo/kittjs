@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>KITT.JS - HOME</title>
+    <script src="brain.js"></script>
+</head>
+
+<body>
+    <form id="speech-form" onsubmit="showString()">
+        <div class="page-title" align="center">
+            <h1>KITT . JS - HOME</h1>
+        </div>
+
+        <div align="center" id="speech-area">
+            <input type="text" id="speech" name="speech" size="10">
+
+        </div>
+        <br>
+        <div align="center" class="speech-submit">
+            <button type="submit" id="your-id" onclick="showString()">submit</button>
+        </div>
+    </form>
+
+    <div class="speech-input" id="speech-input">
+        <p id="updated-text"></p>
+    </div>
+</body>
+
+</html>
