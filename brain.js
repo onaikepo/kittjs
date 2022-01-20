@@ -4,14 +4,14 @@ var teachmode = true;
 
 function vocabTeachMode() {
 
-    if devMode == true {
+    if (teachMode == true) {
 
     } else {
 
     }
 }
 
-}
+
 
 function showString() {
     event.preventDefault();
@@ -31,7 +31,7 @@ function parseMessage() {
 
     userPassedInput = false
 
-    if userPassedInput == true {
+    if (userPassedInput == true) {
 
         //call vocabPack() which will contain a dictionairy of all key words. 
 

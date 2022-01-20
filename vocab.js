@@ -9,6 +9,7 @@ vocab.indexOf(string) !== -1 {
     alert("This already exsists in my vocab")
 }*/
 
+// This function is intended to store the check if there is an input entered in New Word. If there is then it should push it into the new Word. Eventually we will need add a function which checks if the word is already in the section. 
 function newVocab(newWord) {
     if (newWord == ! "a") {
         vocab.push(newWord);
