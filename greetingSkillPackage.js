@@ -8,12 +8,12 @@ function greetingSkill(inputString) {
     switch (inputString) {
         case 'Hello':
             inputString = "Hello"
-            return inputString
+            return outputString
             break;
 
         case 'Hi':
             inputString = "Hello"
-            return inputString
+            return outputString
             break;
     }
 

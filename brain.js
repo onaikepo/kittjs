@@ -1,5 +1,9 @@
 
-var outputString = " "
+var outputString = ""
+
+var inputString = " "
+
+var kittRespond = ""
 
 var teachmode = false;
 // This will bring in the vocab teach mode function
@@ -18,7 +22,10 @@ function vocabTeachMode() {
 function parsingError() {
 
     var misunderstood = "Sorry I didn't quite get that."
-    console.log("error parsing message")
+    console.log("error parsing message");
+
+    var outputString = misunderstood;
+    updateState(outputString);
 
 }
 
@@ -29,24 +36,29 @@ function showString() {
 
     var speech = document.getElementById("updated-text").innerHTML
 
+    var respond = "Kitt said" + outputString
 
     var result = "You said: " + string;
 
-    document.getElementById("updated-text").innerHTML = result
+    inputString = result;
+    //document.getElementById("updated-text").innerHTML = result
     //vocabTeachMode(); - at some point we will uncomment this line. 
-    checkString();
-    newVocab();
+    //checkString();
+    //newVocab();
+    updateState(inputString, outputString);
 }
 
 // Maybe we should declare a global variable that can be constantly rewritten and that will be applied as the input parameter for the UpdateState()
 
-function updateState(outputString) {
+function updateState(inputString, outputString) {
     event.preventDefault();
-    var response = outputString;
+    var response = inputString;
+    var kittResponse = outputString;
 
     document.getElementById("updated-text").innerHTML = response
+    document.getElementById("response-text").innerHTML = kittResponse
 
-    return response
+    return response, kittRespond
 
 }
 
@@ -59,15 +71,20 @@ function parseMessage() {
 
     if (userPassedInput == true) {
 
-        const instructionRequest = "a"
+        var instructionRequest = document.getElementById("speech").value;
 
         switch (instructionRequest) {
             case 'Hello':
-                //greetingSkillpackage()
+                greetingSkillpackage(inputString);
+                updateState(outputString);
+                break;
+
+            case 'Hi':
+                greetingSkillpackage(inputString);
+                updateState(outputString);
                 break;
 
             default:
-
                 console.log("Error Parsing Message")
                 outputString = "Sorry, I didn't understand"
                 updateState(outputString)
