@@ -5,7 +5,7 @@ var inputString = " "
 
 var kittRespond = ""
 
-var teachmode = false;
+var teachmode = true;
 // This will bring in the vocab teach mode function
 
 function vocabTeachMode() {
