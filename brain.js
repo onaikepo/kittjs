@@ -5,7 +5,7 @@ var inputString = " "
 
 var kittRespond = ""
 
-var teachmode = true;
+var teachmode = false;
 // This will bring in the vocab teach mode function
 
 function vocabTeachMode() {
@@ -50,17 +50,6 @@ function showString() {
 
 // Maybe we should declare a global variable that can be constantly rewritten and that will be applied as the input parameter for the UpdateState()
 
-function updateState(inputString, outputString) {
-    event.preventDefault();
-    var response = inputString;
-    var kittResponse = outputString;
-
-    document.getElementById("updated-text").innerHTML = response
-    document.getElementById("response-text").innerHTML = kittResponse
-
-    return response, kittRespond
-
-}
 
 function parseMessage() {
     //This section will focus on the breaking down of the string in some sort of request. 
@@ -102,3 +91,14 @@ function callSkillPack() {
     // We could hold an array of the different functions and then we can add a switch for each of the different functions/skill packs. 
 }
 
+function updateState(inputString, outputString) {
+    event.preventDefault();
+    var response = inputString;
+    var kittResponse = outputString;
+
+    document.getElementById("updated-text").innerHTML = response
+    document.getElementById("response-text").innerHTML = kittResponse
+
+    return response, kittRespond
+
+}
