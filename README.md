@@ -1,6 +1,6 @@
 README
 
-Jarvs.js is a project I have been wanting to work on for many years. Howwever, I had never spent enough time honing my programming skills to build this. 
+KITT.js is a project I have been wanting to work on for many years. Howwever, I had never spent enough time honing my programming skills to build this. 
 
 Now I believe my JS + Googling skills are at a sufficient level to take on this project. So welcome to KITT.JS 
 
